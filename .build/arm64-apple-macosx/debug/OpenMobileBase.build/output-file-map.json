@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/master.swiftdeps"
+  },
+  "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/Sources/OpenMobileBase/OpenMobileBase.swift": {
+    "dependencies": "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/OpenMobileBase.d",
+    "object": "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/OpenMobileBase.swift.o",
+    "swiftmodule": "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/OpenMobileBase~partial.swiftmodule",
+    "swift-dependencies": "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/OpenMobileBase.swiftdeps"
+  }
+}

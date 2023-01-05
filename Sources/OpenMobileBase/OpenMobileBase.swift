@@ -1,8 +1,8 @@
 import OpenMobileCore
 
 public struct OpenMobileBase {
-    static let shared = OpenMobileBase()
-    private init() {}
+    
+    init() {}
 
     func initialize(baseUrl: String, pkLive: String) {
         // OpenMobile.shared.initialize()
