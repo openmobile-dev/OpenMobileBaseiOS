@@ -1,0 +1,4 @@
+framework module OpenMobileBase {
+  header "OpenMobileBase-Swift.h"
+  requires objc
+}

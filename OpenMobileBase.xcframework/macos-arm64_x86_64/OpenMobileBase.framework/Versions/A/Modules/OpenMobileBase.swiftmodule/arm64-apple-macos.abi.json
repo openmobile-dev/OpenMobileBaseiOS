@@ -1,0 +1,104 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "OpenMobileBase",
+        "printedName": "OpenMobileBase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpenMobileBase",
+                "printedName": "OpenMobileBase.OpenMobileBase",
+                "usr": "s:14OpenMobileBaseAAV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14OpenMobileBaseAAV6sharedABvpZ",
+            "mangledName": "$s14OpenMobileBaseAAV6sharedABvpZ",
+            "moduleName": "OpenMobileBase",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpenMobileBase",
+                    "printedName": "OpenMobileBase.OpenMobileBase",
+                    "usr": "s:14OpenMobileBaseAAV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14OpenMobileBaseAAV6sharedABvgZ",
+                "mangledName": "$s14OpenMobileBaseAAV6sharedABvgZ",
+                "moduleName": "OpenMobileBase",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(baseUrl:pkLive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14OpenMobileBaseAAV10initialize7baseUrl6pkLiveySS_SStF",
+            "mangledName": "$s14OpenMobileBaseAAV10initialize7baseUrl6pkLiveySS_SStF",
+            "moduleName": "OpenMobileBase",
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14OpenMobileBaseAAV",
+        "mangledName": "$s14OpenMobileBaseAAV",
+        "moduleName": "OpenMobileBase",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
