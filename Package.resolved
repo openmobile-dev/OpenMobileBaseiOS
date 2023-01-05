@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "openmobilecoreios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/openmobile-dev/OpenMobileCoreiOS.git",
+      "state" : {
+        "revision" : "2be3c9ee2c5a442566c3ee7223a31199eb2a9ed1",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
