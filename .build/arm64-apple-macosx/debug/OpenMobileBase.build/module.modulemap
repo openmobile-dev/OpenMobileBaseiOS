@@ -1,4 +1,0 @@
-module OpenMobileBase {
-    header "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/arm64-apple-macosx/debug/OpenMobileBase.build/OpenMobileBase-Swift.h"
-    requires objc
-}
