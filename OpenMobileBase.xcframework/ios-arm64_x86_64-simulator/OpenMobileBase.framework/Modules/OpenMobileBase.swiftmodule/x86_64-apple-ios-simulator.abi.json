@@ -10,6 +10,28 @@
         "printedName": "OpenMobileBase",
         "children": [
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpenMobileBase",
+                "printedName": "OpenMobileBase.OpenMobileBase",
+                "usr": "s:14OpenMobileBaseAAV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14OpenMobileBaseAAVABycfc",
+            "mangledName": "$s14OpenMobileBaseAAVABycfc",
+            "moduleName": "OpenMobileBase",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "initialize",
             "printedName": "initialize(baseUrl:pkLive:)",
@@ -37,8 +59,7 @@
             "mangledName": "$s14OpenMobileBaseAAV10initialize7baseUrl6pkLiveySS_SStF",
             "moduleName": "OpenMobileBase",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -61,25 +82,6 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OpenMobileBase",
-                "printedName": "OpenMobileBase.OpenMobileBase",
-                "usr": "s:14OpenMobileBaseAAV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:14OpenMobileBaseAAVABycfc",
-            "mangledName": "$s14OpenMobileBaseAAVABycfc",
-            "moduleName": "OpenMobileBase",
-            "implicit": true,
-            "init_kind": "Designated"
           }
         ],
         "declKind": "Struct",

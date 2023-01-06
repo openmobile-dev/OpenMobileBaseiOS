@@ -6,6 +6,7 @@ import Swift
 import _Concurrency
 import _StringProcessing
 public struct OpenMobileBase {
+  public init()
   public func initialize(baseUrl: Swift.String, pkLive: Swift.String)
   public func printExample()
 }
