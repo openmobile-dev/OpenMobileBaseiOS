@@ -11,13 +11,16 @@ let package = Package(
     products: [
         .library(
             name: "OpenMobileBase",
+            type: .dynamic,
             targets: ["OpenMobileBase"]),
     ],
-    dependencies: [        
-        .package(url: "https://github.com/openmobile-dev/OpenMobileCoreiOS.git", exact: "0.0.1"),        
+    dependencies: [
+        //        .package(name: "OpenMobileCore", path: "../openmobile-core/build/frameworks/OpenMobileCore"),
+        .package(name: "OpenMobileCore", path: "include/OpenMobileCore"),
     ],
-    targets: [        
+    targets: [
+        // .systemLibrary(name: "OpenMobileCore", path: "include/OpenMobileCore.framework"),
         .target(
-            name: "OpenMobileBase",            
-            dependencies: [.product(name: "OpenMobileCore", package: "OpenMobileCoreiOS")]),
+            name: "OpenMobileBase",
+            dependencies: ["OpenMobileCore"]),
     ])

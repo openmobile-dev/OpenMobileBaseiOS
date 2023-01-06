@@ -1,10 +1,10 @@
 import OpenMobileCore
 
 public struct OpenMobileBase {
-    
-    init() {}
+    // static let shared = OpenMobileBase()
+    // private init() {}
 
-    func initialize(baseUrl: String, pkLive: String) {
+    public func initialize(baseUrl: String, pkLive: String) {
         // OpenMobile.shared.initialize()
         /*
          OpenMobile.shared.initialize()
@@ -13,7 +13,7 @@ public struct OpenMobileBase {
           */
     }
 
-    func printExample() {
+    public func printExample() {
         print("hello!")
     }
 }
