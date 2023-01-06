@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
 options: "e613561f044526f127ca7991278006174835704ee07e5a36e7c03c478da40d06"
-build_start_time: [1672967566, 433509826]
-build_end_time: [1672967566, 504836082]
+build_start_time: [1673020369, 873744010]
+build_end_time: [1673020369, 930130004]
 inputs:
-  "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/Sources/OpenMobileBase/OpenMobileBase.swift": !private [1672962329, 206842899]
+  "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/Sources/OpenMobileBase/OpenMobileBase.swift": !private [1673019388, 51651477]

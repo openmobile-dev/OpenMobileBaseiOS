@@ -3,12 +3,12 @@
     "artifacts" : [
       {
         "packageRef" : {
-          "identity" : "openmobilecoreios",
-          "kind" : "remoteSourceControl",
-          "location" : "https://github.com/openmobile-dev/OpenMobileCoreiOS.git",
+          "identity" : "openmobilecore",
+          "kind" : "fileSystem",
+          "location" : "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/include/OpenMobileCore",
           "name" : "OpenMobileCore"
         },
-        "path" : "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/.build/checkouts/OpenMobileCoreiOS/OpenMobileCore.xcframework",
+        "path" : "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/include/OpenMobileCore/OpenMobileCore.xcframework",
         "source" : {
           "type" : "local"
         },
@@ -19,19 +19,16 @@
       {
         "basedOn" : null,
         "packageRef" : {
-          "identity" : "openmobilecoreios",
-          "kind" : "remoteSourceControl",
-          "location" : "https://github.com/openmobile-dev/OpenMobileCoreiOS.git",
+          "identity" : "openmobilecore",
+          "kind" : "fileSystem",
+          "location" : "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/include/OpenMobileCore",
           "name" : "OpenMobileCore"
         },
         "state" : {
-          "checkoutState" : {
-            "revision" : "2be3c9ee2c5a442566c3ee7223a31199eb2a9ed1",
-            "version" : "0.0.1"
-          },
-          "name" : "sourceControlCheckout"
+          "name" : "fileSystem",
+          "path" : "/Users/srjavi/Downloads/OpenMobileBase/OpenMobileBase/include/OpenMobileCore"
         },
-        "subpath" : "OpenMobileCoreiOS"
+        "subpath" : "openmobilecore"
       }
     ]
   },

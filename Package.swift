@@ -1,26 +1,21 @@
-// swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
     name: "OpenMobileBase",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v13)
     ],
     products: [
         .library(
             name: "OpenMobileBase",
-            type: .dynamic,
-            targets: ["OpenMobileBase"]),
-    ],
-    dependencies: [
-        //        .package(name: "OpenMobileCore", path: "../openmobile-core/build/frameworks/OpenMobileCore"),
-        .package(name: "OpenMobileCore", path: "include/OpenMobileCore"),
+            targets: ["OpenMobileBase"]
+        ),
     ],
     targets: [
-        // .systemLibrary(name: "OpenMobileCore", path: "include/OpenMobileCore.framework"),
-        .target(
+        .binaryTarget(
             name: "OpenMobileBase",
-            dependencies: ["OpenMobileCore"]),
-    ])
+            path: "./OpenMobileBase.xcframework"
+        ),
+    ]
+)
