@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.7'
 
-  s.vendored_frameworks  = '.build/OpenMobileNetwork.framework'
+  s.vendored_frameworks  = 'OpenMobileNetwork.framework'
   s.libraries            = 'c++'
   s.source_files         = 'Sources/**/*'
   s.dependency 'SDWebImageSwiftUI', '~> 2.0.0'
