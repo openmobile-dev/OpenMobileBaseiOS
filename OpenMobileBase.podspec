@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks  = 'OpenMobileCore.framework', 'OpenMobileNetwork.framework'
   s.libraries            = 'c++'
   s.source_files      = 'Sources/**/*'
-
   s.dependency 'SDWebImageSwiftUI', '~> 2.0.0'
   s.static_framework = true
+  s.requires_arc     = true
 end
