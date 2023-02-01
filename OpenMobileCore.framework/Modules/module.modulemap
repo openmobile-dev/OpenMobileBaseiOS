@@ -1,6 +1,0 @@
-framework module OpenMobileCore {
-    umbrella header "OpenMobileCore.h"
-
-    export *
-    module * { export * }
-}
