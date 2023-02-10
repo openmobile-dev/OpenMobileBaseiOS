@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'OpenMobileBase'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'Building Mobile Apps Simplified.'
   s.homepage         = 'https://openmobile.dev/'
   s.license          = { :type => "Commercial", :text => "Copyright 2023" }
   s.authors          = 'OpenMobile'
-  s.source           = { :git => 'https://github.com/openmobile-dev/OpenMobileBaseiOS.git', :tag => '0.0.4' }
+  s.source           = { :git => 'https://github.com/openmobile-dev/OpenMobileBaseiOS.git', :tag => '0.0.5' }
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.7'
 
