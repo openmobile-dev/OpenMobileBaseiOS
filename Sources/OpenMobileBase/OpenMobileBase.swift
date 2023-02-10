@@ -82,6 +82,29 @@ public struct OpenMobile {
         return UIParser(json: convertStringToDictionary(text: json) ?? [:])
     }
 
+    public func getRemoteComponent(screenId: String, completionHandler: @escaping ([String: AnyObject]?, Error?) -> Void) {
+        let actionLink = OpenMobileActions.NETWORK_GET(
+            tag: "NETWORK_GET",
+            parameters: ["path": "/v1/screens/\(screenId)"]
+        )
+        OpenMobileCore.shared.runFutureAction(actionLink: actionLink) { response, error in
+            if response != nil {
+                let responseMap = convertStringToDictionary(text: response as! String)
+                var definition = responseMap?["data"]?["definition"]
+                if definition != nil {
+                    completionHandler(definition as? [String: AnyObject], nil)
+                } else {
+                    completionHandler(nil, OpenMobileError.wrongResponseError)
+                }
+
+            } else if let error = error {
+                completionHandler(nil, error)
+            } else {
+                completionHandler(nil, OpenMobileError.unknowError)
+            }
+        }
+    }
+
     private func convertStringToDictionary(text: String) -> [String: AnyObject]? {
         if let data = text.data(using: .utf8) {
             do {
@@ -124,4 +147,9 @@ class NetworkManagerLocal: ActionManager {
             print("Action not found")
         }
     }
+}
+
+enum OpenMobileError: Error {
+    case wrongResponseError
+    case unknowError
 }
