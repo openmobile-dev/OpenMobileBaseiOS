@@ -1,8 +1,0 @@
-framework module OpenMobileNetwork {
-    umbrella header "OpenMobileNetwork.h"
-
-    export *
-    module * { export * }
-
-    use Foundation
-}

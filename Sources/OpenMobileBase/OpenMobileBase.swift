@@ -1,6 +1,5 @@
 import Foundation.NSUUID
 import OpenMobileCore
-import OpenMobileNetwork
 import SwiftUI
 
 public struct OpenMobile {
@@ -17,11 +16,15 @@ public struct OpenMobile {
             name: ManagerType.notification,
             actionManager: OMNotificationManager()
         )
-        OpenMobileCore.shared.registerActionManager(name: ManagerType.network, actionManager: NetworkManagerLocal(networkRequest: NetworkRequest(
-            baseUrl: baseUrl,
-            pkLive: pkLive,
-            headers: ["Content-Type": "application/json"]
-        )))
+
+        OpenMobileCore.shared.registerActionManager(
+            name: ManagerType.network,
+            actionManager: NetworkManager(
+                baseUrl: baseUrl,
+                pkLive: pkLive,
+                headers: ["Content-Type": "application/json"]
+            )
+        )
     }
 
     public func registerDevicePushToken(token: String, userId: String) {
@@ -90,7 +93,7 @@ public struct OpenMobile {
         OpenMobileCore.shared.runFutureAction(actionLink: actionLink) { response, error in
             if response != nil {
                 let responseMap = convertStringToDictionary(text: response as! String)
-                var definition = responseMap?["data"]?["definition"]
+                let definition = responseMap?["data"]?["definition"]
                 if definition != nil {
                     completionHandler(definition as? [String: AnyObject], nil)
                 } else {
