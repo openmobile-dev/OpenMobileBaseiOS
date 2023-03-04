@@ -43,7 +43,10 @@ class AttributesJSBridgeHandler: NSObject, WKScriptMessageHandler {
                 if let map = data {
                     for key in map.keys {
                         print("SetSettingsValue key: \(key) value: \(String(describing: map[key]))")
-                        OpenMobileCore.shared.setSettingsValue(key: key, value: map[key] as! String)
+                        if let value = map[key] {
+                            let stringValue = String(describing: value)
+                            OpenMobileCore.shared.setSettingsValue(key: key, value: stringValue)
+                        }
                     }
                 } else {
                     print("Missing attributes")
