@@ -1,8 +1,8 @@
-import SDWebImageSwiftUI
+import Combine
 import SwiftUI
 
 @available(iOS 13.0.0, *)
-struct UIImage: View {
+struct OMUIImage: View {
     var url: String
     var contentScale: String
     var modifier: [String: AnyObject]?
@@ -18,27 +18,69 @@ struct UIImage: View {
     }
 
     var body: some View {
-        WebImage(url: URL(string: url))
-            .resizable()
-            .if(contentScale == "fit") { content in
-                content.scaledToFit()
-            }
-            .if(contentScale == "fill") { content in
-                content.scaledToFill()
-            }
-            .modifier(Modifier(modifier: modifier))
+        if let imageURL = URL(string: url) {
+            RemoteImage(url: imageURL)
+                .if(contentScale == "fit") { content in
+                    content.scaledToFit()
+                }
+                .if(contentScale == "fill") { content in
+                    content.scaledToFill()
+                }
+                .modifier(Modifier(modifier: modifier))
+        } else {
+            Image(systemName: "exclamationmark.triangle")
+        }
     }
 }
 
-/*
- WebImage(url: URL(string: url))
-     .if(contentScale == "fill") { content in
-         content.resizable().scaledToFill()
-     }
-     /*
-         .if(contentScale == "fit") { content in
-             (content as! WebImage).resizable().scaledToFit()
-         }
-      */
-     .modifier(Modifier(modifier: modifier))
- */
+@available(iOS 13.0.0, *)
+struct RemoteImage: View {
+    let url: URL
+    @State private var image: UIImage?
+    @State private var cancellable: AnyCancellable?
+
+    var body: some View {
+        Group {
+            if let image = image {
+                Image(uiImage: image)
+                    .resizable()
+            } else {
+                CustomProgressView()
+            }
+        }
+        .onAppear {
+            cancellable = URLSession.shared.dataTaskPublisher(for: url)
+                .map { UIImage(data: $0.data) }
+                .replaceError(with: nil)
+                .receive(on: DispatchQueue.main)
+                .sink { self.image = $0 }
+        }
+        .onDisappear {
+            cancellable?.cancel()
+        }
+    }
+}
+
+struct ActivityIndicator: UIViewRepresentable {
+    typealias UIViewType = UIActivityIndicatorView
+
+    var isAnimating: Binding<Bool>
+    let style: UIActivityIndicatorView.Style
+
+    func makeUIView(context: Context) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView(style: style)
+    }
+
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {
+        isAnimating.wrappedValue ? uiView.startAnimating() : uiView.stopAnimating()
+    }
+}
+
+struct CustomProgressView: View {
+    var body: some View {
+        VStack {
+            ActivityIndicator(isAnimating: .constant(true), style: .medium)
+            Text("Loading...")
+        }
+    }
+}

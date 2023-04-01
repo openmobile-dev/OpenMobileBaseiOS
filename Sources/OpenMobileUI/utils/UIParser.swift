@@ -18,7 +18,7 @@ public struct UIParser: View {
         case "text":
             return AnyView(UIText(json: jsonMap))
         case "image":
-            return AnyView(UIImage(json: jsonMap))
+            return AnyView(OMUIImage(json: jsonMap))
         case "button":
             return AnyView(UIButton(json: jsonMap))
         case "webView":

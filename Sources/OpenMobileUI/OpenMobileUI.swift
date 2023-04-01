@@ -64,6 +64,7 @@ public class OpenMobileUI: ActionManager {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension UIApplication {
     class func topViewController(base: UIViewController? = UIApplication.shared.currentWindow?.rootViewController) -> UIViewController? {
         if let tab = base as? UITabBarController {
